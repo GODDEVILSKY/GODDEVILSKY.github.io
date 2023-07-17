@@ -3,11 +3,442 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>GODDEVILSKY</title>
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        #location h1 {
+            color: white;
+        }
+
+        * {
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }
+
+        /*    header */
+        .fa-star {
+            font-size: 32px;
+            /* padding: 0 10px;*/
+            margin: 0 10px;
+            vertical-align: -9px;
+        }
+
+        hr {
+            display: inline-block;
+            width: 120px;
+            height: 4px;
+            border-radius: 5px;
+            background-color: black;
+            border: none;
+        }
+
+        .seperator.white hr {
+            background-color: white;
+        }
+
+        .seperator.white .fa-star {
+            color: white;
+        }
+
+        .seperator.black .fa-star {
+            color: rgb(47, 61, 77);
+        }
+
+        .seperator.black hr {
+            background-color: rgb(47, 61, 77);
+        }
+
+        header {
+            background-color: #1abc9d;
+            color: white;
+            text-align: center;
+            padding: 90px 0;
+            font-family: sans-serif;
+            font-size: 22px;
+        }
+
+        header img {
+            width: 250px;
+        }
+
+        header h1 {
+            font-size: 180px;
+            font-weight: bolder;
+            font-family: sans-serif;
+            border: solid;
+            background-size: cover;
+
+            background-image: url(https://images.unsplash.com/photo-1472214103451-9374bd1c798e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8bmF0dXJlfGVufDB8fDB8fHww&auto=format&fit=crop&w=1200&q=60);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            ;
+        }
+
+        header .seperator {
+            margin: 30px auto 40px;
+        }
+
+        h1 {
+
+            color: black;
+            text-transform: uppercase;
+            font-size: 44px;
+            font-family: sans-serif;
+        }
+
+        img {
+            width: 400px;
+            height: inherit;
+        }
+
+        /* about*/
+        #about {
+            background-color: #1abc9d;
+            text-align: center;
+            color: white;
+        }
+
+        #about h1 {
+            font-size: 38px;
+            font-family: sans-serif;
+            padding-top: 90px;
+
+        }
+
+        #about .seperator {
+            margin: 17px auto 33px;
+        }
+
+        #about hr {
+            background-color: white;
+        }
+
+        #about .fa-star {
+            font-size: 32px;
+            vertical-align: -9px;
+
+        }
+
+        #about {
+            font-size: 24px;
+            font-family: sans-serif;
+            margin-right: 10px;
+            margin-left: 10px;
+            text-align: left;
+        }
+
+        #about #first {
+            margin-bottom: 26px;
+
+        }
+
+        button {
+            font-size: 20px;
+            background-color: #1abc9d;
+        }
+
+        #portfolio {
+            text-align: center;
+        }
+
+        text {
+            padding: 50px;
+            margin-left: 50px;
+            margin-right: 50px;
+            color: white;
+        }
+
+        .fa-twitter:hover {
+            color: deepskyblue;
+            border-color: deepskyblue;
+            background-color: white;
+        }
+
+        .fa-twitter {
+            border: solid;
+            padding: 15px;
+            border-radius: 50%;
+            /*      */
+            transition: 1s;
+        }
+
+        .fa-facebook-fr:hover {
+            color: deepskyblue;
+            border-color: deepskyblue;
+            background-color: white;
+        }
+
+        .fa-facebook-f {
+            border: solid;
+            padding: 17px;
+            border-radius: 45%;
+            /*      */
+            transition: 1s;
+        }
+
+        .fa-instagram:hover {
+            color: deepskyblue;
+            border-color: deepskyblue;
+            background-color: white;
+        }
+
+        .fa-instagram {
+            border: solid;
+            padding: 15px;
+            border-radius: 50%;
+            transition: 1s;
+        }
+
+        .fa-basketball:hover {
+            color: deepskyblue;
+            border-color: deepskyblue;
+            background-color: white;
+        }
+
+        #information {
+            background-color: #2c3e50;
+            text-align: center;
+            padding: 85px;
+        }
+
+        #information h1 {
+            color: white;
+            font-family: sans-serif;
+        }
+
+        #information {
+            color: white;
+        }
+
+        .fa-twitter,
+        .fa-facebook,
+        .fa-linkedin-in,
+        .fa-dribbble {
+            border: solid;
+            padding: 15px;
+            border-radius: 50%;
+            color: white;
+            transition: 0.25s;
+            margin: 3px;
+        }
+
+        .fa-dribbble:hover,
+        .fa-linkedin-in:hover,
+        .fa-twitter:hover,
+        .fa-facebook:hover {
+            color: black;
+            border-color: white;
+            background-color: white;
+        }
+
+        #contact h1 {
+            color: #2c3e50;
+            text-align: center;
+            padding: 80px 0px;
+            font-family: sans-serif;
+            font-size: 38px;
+        }
+
+        #contact .fa-star {
+            font-size: 32px;
+            margin: 21px 10px;
+            vertical-align: -9px;
+            color: #2c3e50;
+        }
+
+        #contact hr {
+            background-color: #2c3e50;
+        }
+
+        #contact .seperator {
+            margin-top: -80px;
+            margin-bottom: 30px;
+        }
+
+        #contact {
+            text-align: center;
+        }
+
+        #contact input {
+            border: none;
+            border-bottom: solid 1px darkgray;
+            width: 730px;
+            height: 31px;
+            margin-bottom: 50px;
+        }
+
+        #contact h3 {
+            font-family: sans-serif;
+            color: dimgrey;
+            font-size: 24px;
+            font-weight: 100;
+            text-align: left;
+            margin-left: 105px;
+        }
+
+        #contact textarea {
+            border: none;
+            border-bottom: solid 1px darkgray;
+            width: 730px;
+            height: 100px;
+        }
+
+        #contact button {
+            background-color: rgb(26, 188, 156);
+            color: white;
+            border-color: white;
+            height: 65px;
+            width: 100px;
+            border-radius: 7px;
+            font-size: 20px;
+            margin: 100px;
+            margin-right: 1000px;
+            margin-top: 20px
+        }
+
+        #copyright {
+            background-color: #1a252f;
+            padding: 30px;
+        }
+
+        #copyright footer {
+            color: white;
+            background-color: #1a252f;
+            text-align: center;
+            font-family: sans-serif;
+            font-size: 12.5px;
+        }
+
+        #startbootstrap {
+            color: white;
+            font-family: sans-serif;
+            font-weight: 100;
+            margin-left: 50px;
+            margin-right: 50px;
+            margin-top: -10px;
+        }
+
+        #john {
+            color: white;
+            font-family: sans-serif;
+            font-weight: 100;
+            margin-bottom: 35px;
+
+        }
+    </style>
 </head>
 
 <body>
-    <center><li>Hello World I am Junhuan Xu</li></center>
-</body>
 
-</html>
+    <header>
+        <img src="https://startbootstrap.github.io/startbootstrap-freelancer/assets/img/avataaars.svg" alt="">
+        <h1>Junhuan Xu</h1>
+        <div class="seperator white">
+            <hr>
+            <i class="fa-solid fa-star"></i>
+            <hr>
+        </div>
+        <p>Student at Burggymnasium</p>
+    </header>
+
+    <div id="portfolio">
+        <h1>
+            <center>Pictures</center>
+        </h1>
+        <div class="seperator black">
+            <hr>
+            <i class="fa-solid fa-star"></i>
+            <hr>
+        </div>
+        <img src="https://startbootstrap.github.io/startbootstrap-freelancer/assets/img/portfolio/cabin.png" alt="">
+        <img src="https://startbootstrap.github.io/startbootstrap-freelancer/assets/img/portfolio/cake.png" alt="">
+        <img src="https://startbootstrap.github.io/startbootstrap-freelancer/assets/img/portfolio/circus.png" alt="">
+        <img src="https://startbootstrap.github.io/startbootstrap-freelancer/assets/img/portfolio/game.png" alt="">
+        <img src="https://startbootstrap.github.io/startbootstrap-freelancer/assets/img/portfolio/safe.png" alt="">
+        <img src="https://startbootstrap.github.io/startbootstrap-freelancer/assets/img/portfolio/submarine.png" alt=""><br>
+    </div>
+
+    <section id="about">
+        <h1>
+            ABOUT
+        </h1>
+        <div class="seperator">
+            <hr>
+            <i class="fa-solid fa-star"></i>
+            <hr>
+        </div>
+        <p id="first">
+            I am a very normal student in a school in germany, Nord-Rhein-Westfalen.
+            Here is something about my school:
+        </p>
+    </section>
+    <section id="contact">
+        <h1>
+            CONTACT ME
+        </h1>
+        <div class="seperator">
+            <hr>
+            <i class="fa-solid fa-star"></i>
+            <hr>
+        </div>
+        <h3>
+            Full name
+        </h3>
+        <input type="text">
+        <h3>
+            Email address
+        </h3>
+        <input type="text">
+        <h3>
+            Phone number
+        </h3>
+        <input type="text">
+        <h3>
+            Message
+        </h3>
+        <textarea name="" id="" cols="30" rows="10"></textarea>
+        <center><button>Send</button></center>
+    </section>
+
+    <section id="information">
+        <h1 id="LOCATION">
+            LOCATION
+        </h1>
+        <h3 id="john">
+            45145, Hamburgerstraße 85
+            Nordrhein-Westfalen, Deutschland
+        </h3>
+        <h1 id="AROUNDTHEWEB">
+            AROUND THE WEB
+        </h1>
+        <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-twitter"></i>
+        <i class="fa-brands fa-linkedin-in"></i>
+        <i class="fa-brands fa-dribbble"></i>
+        <h1>
+            <center>Burggymnasium</center>
+        </h1>
+        <h3>
+            <center>Burgplatz 4</center>
+        </h3>
+        <h3>
+            <center>Essen 45127 F247+2X Essen</center>
+        </h3>
+        <h3>Phone: 0201 88480430</h3>
+        <h3>Fax: 0201 88480431</h3>
+        <h3>E-Mail: <a href="mailto:burggymnasium.info@schule.essen.de">burggymnasium.info@schule.essen.de</a></h3>
+        <h3>Principal: Simone Reuen</h3>
+        <h3>Secretary: Melanie Spans and Frau Schmitt</h3>
+    </section>
+    <section id="copyright">
+        <footer>
+            Copyright &copy; Your Website 2023
+        </footer>
+    </section>
+</body></html>
+
+
+
+
